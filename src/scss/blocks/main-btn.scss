@@ -1,0 +1,54 @@
+.main-btn {
+
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+
+    &__wrapper {
+
+        @include gradient-orange;
+        padding-top: 18px;
+        padding-bottom: 18px;
+        padding-left: 15px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 50px;
+        width: 250px;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 0 transparent;
+        cursor: pointer;
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 10px rgba(#FF800B, 0.2);
+        }
+
+        &:active {
+            transform: translateY(2px);
+            box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.2);
+        }
+    }
+}
+
+@media (max-width: $tableWidth) {
+    .main-btn {
+        &__wrapper {
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (max-width: $smTablet) {}
+
+@media (max-width: $xlPhoneWidth) {
+    .main-btn {
+        &__wrapper {
+            width: 100%;
+        }
+    }
+}

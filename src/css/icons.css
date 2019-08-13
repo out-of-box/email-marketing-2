@@ -1,0 +1,8 @@
+.icons__arrow {
+background-image: url('../img/icons/arrow.svg') no-repeat;
+display: block;
+width: 13px;
+height: 13px;
+
+border: 1px solid red;
+}

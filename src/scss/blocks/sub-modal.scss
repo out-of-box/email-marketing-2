@@ -1,0 +1,88 @@
+
+.sub-modal {
+    width: 500px;
+    margin: 0 auto;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    justify-content: center;
+    padding: 5px;
+
+    position: relative;
+
+    &__paranja {
+        z-index: 1000;
+        display: none;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.8);
+        
+        &--shown {
+            display: flex;
+            
+        }
+
+    }
+    &__close-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #C4C4C4;
+        border-radius: 100%;
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        cursor: pointer;
+    }
+
+    &__text-wrapper {
+        text-align: center;
+        margin-top: 150px;
+    }
+
+    &__text {
+        @include main-h2;
+        color: #fff;
+        font-size: 26px;
+
+        &--big {
+            @include main-h2;
+            color: #fff;
+        }
+    }
+}
+
+@media (max-width: $tableWidth) {
+    .sub-modal {
+        width: 320px;
+
+
+        &__text-wrapper {
+            text-align: center;
+            margin-top: 110px;
+        }
+    }
+}
+
+@media (max-width: $smTablet) {
+
+    // .sub-modal {
+    //     width: 320px;
+    // }
+
+    // &__text-wrapper {
+    //     text-align: center;
+    //     margin-top: 0px;
+    // }
+}
+
+@media (max-width: $xlPhoneWidth) {}

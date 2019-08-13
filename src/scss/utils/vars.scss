@@ -1,0 +1,99 @@
+// Typo
+$mainFont: "Raleway",
+"Montserrat",
+Helvetica,
+sans-serif;
+
+
+// Font Sizes
+$font-size-2xs: 12px;
+$font-size-xs: 13px;
+$font-size-ms: 14px;
+$font-size-s: 16px;
+$font-size-m: 18px;
+$font-size-l: 20px;
+$font-size-xl: 24px;
+$font-size-xxl: 25px;
+$font-size-2xl: 30px;
+$font-size-3xl: 40px;
+
+$font-size-desktop-s: 20px;
+$font-size-desktop-m: 24px;
+$font-size-desktop-xl: 35px;
+$font-size-desktop-2xl: 45px;
+
+// MQ
+$desktopWidth: 1280px;
+$smDesktopWidth: 1120px;
+$tableWidth: 1024px;
+$smTablet: 768px;
+$xlPhoneWidth: 680px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+
+
+// Grid
+.wrapper {
+    max-width: 1340px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container {
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+@media (max-width: $tableWidth) {
+    .wrapper {
+        max-width: 1020px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+
+@media (max-width: $smTablet) {
+    .wrapper {
+        max-width: 750px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media (max-width: $xlPhoneWidth) {
+    .wrapper {
+        max-width: 660px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: $phoneWidth) {
+    .wrapper {
+        max-width: 410px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}

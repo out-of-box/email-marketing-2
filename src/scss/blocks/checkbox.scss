@@ -1,0 +1,55 @@
+.checkbox {
+    position: relative;
+
+    &__wrapper {
+        width: 340px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+.checkbox__input {
+    position: absolute;
+    appearance: none;
+}
+
+.checkbox-label {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #B2B8D1;
+}
+
+.checkbox__link {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: #B2B8D1;
+    text-decoration: underline;
+    // display: inline-block;
+
+}
+
+.checkbox__box {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: none;
+    background-color: #FAFBFE;
+    left: -22px;
+    top: 2px;
+}
+
+// Checked
+.checkbox__input:checked+.checkbox__box {
+    // background-image: url("~assets/img/checkbox.svg"); INLINE
+    background-repeat: no-repeat;
+    background-position-x: 2px;
+    background-position-y: 3px;
+}

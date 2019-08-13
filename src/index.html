@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pragmatik</title>
+  <link href="css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</head>
+
+<body class="page-body page-body__bg benefits__bg">
+  <img src="./img/polygon-bg.svg" class='polygon' alt="">
+  <header class="page-header page-header__bg">
+    <style>
+      .page-header__bg {
+        background-image: url('./img/triangle-bg.svg');
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: -50px;
+      }
+
+      .benefits__bg {
+        background-image: url('./img/poly__bg.svg');
+        background-size: 610px 652px;
+        background-repeat: no-repeat;
+        /* background-position-x: -25%;
+        background-position-y: 68%; */
+        background-position-x: -200px;
+        background-position-y: 3150px;
+        z-index: 1;
+
+      }
+
+      .benefits__bg-right {
+        background-image: url('./img/polygon-bg-right.svg');
+        background-size: 610px 652px;
+        background-repeat: no-repeat;
+        background-position-x: 1250px;
+        background-position-y: -160px;
+        z-index: 1;
+      }
+
+      .team__bg {
+        background-image: url('./img/circle-bg.svg');
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 50%;
+        z-index: 1;
+      }
+
+      .polygon {
+        position: absolute;
+        top: -200px;
+        left: -100px;
+        transform: rotate(70deg);
+      }
+
+      @media (max-width: 768px) {
+        .polygon {
+          display: none;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="heading">
+        <img src="./img/logo.svg" alt="logo_out_of_cloud" class="heading__img-logo" width="150px" height="40px">
+        <h1 class="heading__title">Email-маркетинг</h1>
+        <p class="heading__caption">Получи дополнительную прибыль
+        </p>
+      </div>
+    </div>
+  </header>
+  <main class="page-main page-main__bg">
+    <section class="calc calc__bg">
+      <div class="container">
+        <style>
+          .calc__bg {
+            background-image: url('./img/latt.svg');
+            background-repeat: no-repeat;
+            background-position-x: 1%;
+            background-position-y: -42%;
+            z-index: 1;
+          }
+        </style>
+
+        <div class="calc__heading">
+          <h2 class="calc__heading main-title">Посчитай потенциальную выручку:</h2>
+        </div>
+
+        <div class="calc__item">
+          <div class="calc__col-1">
+            <div class="calc-form__wrapper">
+              <form action="" class="calc-form">
+
+                <div class="calc-form__item">
+                  <span class="calc-form__input-title">Размер базы</span>
+                  <label class="calc-form__label" for="1">
+                    <input class="calc-form__input" id="calcB3" type="number" for="1" placeholder="0" value='' />
+                  </label>
+                  <span class="calc-form__input-caption">Сколько подписчиков? </span>
+                </div>
+
+                <div class="calc-form__item">
+                  <span class="calc-form__input-title">Трафик на&nbsp;сайте</span>
+                  <label class="calc-form__label" for="1">
+                    <input class="calc-form__input" id="calcB4" type="number" for="1" placeholder="0" value='' />
+                  </label>
+                  <span class="calc-form__input-caption">Сколько пользователей в&nbsp;месяц? </span>
+                </div>
+
+                <div class="calc-form__item">
+                  <span class="calc-form__input-title">Конверсия покупок на&nbsp;сайте</span>
+                  <label class="calc-form__label" for="1">
+                    <input class="calc-form__input" id="calcB5" type="number" for="1" placeholder="0.1" value='0.1'
+                      step='0.1' />
+                  </label>
+                  <span class="calc-form__input-caption">Сколько процентов из&nbsp;них покупает? </span>
+                </div>
+
+                <div class="calc-form__item">
+                  <span class="calc-form__input-title">Средний чек</span>
+                  <label class="calc-form__label" for="1">
+                    <input class="calc-form__input" id="calcB6" type="number" for="1" placeholder="0" value='' />
+                  </label>
+                  <span class="calc-form__input-caption">Какая средняя сумма покупки в&nbsp;рублях?</span>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div class="calc__col-2">
+            <div class="calc__sum">
+              <span class="calc__sum-text">Итого:</span>
+              <div class="calc__sum-item">
+                <p class="calc__sum-output" id="calc-output">0</p>
+              </div>
+              <span class="calc__sum-value"><i class="icon"><img src="./img/icons/rub.svg" alt=""></i></span>
+              <span class="calc__sum-value calc__sum-value--small">/ мес.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="clients">
+      <div class="container">
+        <div class="clients__heading">
+          <h2 class="clients__heading main-title">
+            Email-канал&nbsp;&mdash; маркетинговый канал с&nbsp;самым высоким ROI
+          </h2>
+        </div>
+
+        <div class="clients__wrapper swiper-container owl-carousel">
+          <div class="clients-item swiper-slide">
+            <div class="clients-item__col-1">
+              <div class="clients-item__content">
+                <div class="clients-item__logo-wrapper">
+                  <img src="./img/logo_puma.svg" alt="" class="clients-item__img-logo">
+                </div>
+                <p class="clients-item__text">Промышленная компания<br> Германии, специализирующаяся на&nbsp;выпуске
+                  спортивной обуви, одежды, инвентаря и&nbsp;парфюмерии.</p>
+              </div>
+            </div>
+            <div class="clients-item__col-2">
+              <div class="clients-item__img-wrapper">
+                <img src="./img/slide_1.svg" alt="" class="clients-item__img">
+              </div>
+              <span class="clients-item__text">За&nbsp;3&nbsp;года увеличили базу подписчиков с&nbsp;20&nbsp;000
+                до&nbsp;80&nbsp;000.</span>
+            </div>
+          </div>
+          <div class="clients-item swiper-slide">
+            <div class="clients-item__col-1">
+              <div class="clients-item__content">
+                <div class="clients-item__logo-wrapper">
+                  <img src="./img/logo_haier.svg" alt="" class="clients-item__img-logo">
+                </div>
+                <p class="clients-item__text">Китайская компания <br>
+                  по&nbsp;производству бытовой техники и&nbsp;электроники</p>
+              </div>
+            </div>
+            <div class="clients-item__col-2">
+              <div class="clients-item__text-wrapper">
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value">
+                    <span class="clients-item__chart-icon">
+                      <img src="./img/icons/big-check.svg" alt="" width="18px" height="14px">
+                    </span>
+                  </span>
+                  Полное<br>
+                  сопровождение коммуникационной<br>
+                  стратегии</div>
+
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value"><sup>&times;</sup>8</span>
+                  увеличили<br>выручку
+                  за&nbsp;1&nbsp;год работы</div>
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value"><sup>&times;</sup>2,5</span>
+                  увеличили <br>
+                  охват базы</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clients-item swiper-slide">
+            <div class="clients-item__col-1">
+              <div class="clients-item__content">
+                <div class="clients-item__logo-wrapper">
+                  <img src="./img/logo_tj.svg" alt="" class="clients-item__img-logo">
+                </div>
+                <p class="clients-item__text">Интернет-магазин<br>
+                  дизайнерской одежды<br>и&nbsp;аксессуаров. <br>
+                  Известен по&nbsp;всему миру, базируется в&nbsp;Сиэтле.
+                </p>
+              </div>
+            </div>
+            <div class="clients-item__col-2">
+              <div class="clients-item__img-wrapper">
+                <img src="./img/slide_3.svg" alt="" class="clients-item__img">
+              </div>
+              <div class="clients-item__text-wrapper clients-item__text-wrapper--narrow">
+                <div class="clients-item__text">
+                  <span class="chart-thumb chart-thumb--grey"></span>
+                  Было
+                </div>
+                <div class="clients-item__text">
+                  <span class="chart-thumb chart-thumb--blue"></span>
+                  Стало</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="clients-item swiper-slide">
+            <div class="clients-item__col-1">
+              <div class="clients-item__content">
+                <div class="clients-item__logo-wrapper">
+                  <img src="./img/logo_nikon.svg" alt="" class="clients-item__img-logo">
+                </div>
+                <p class="clients-item__text">Японская компания,<br>
+                  специализирующаяся<br>
+                  на&nbsp;производстве оптики <br>
+                  и&nbsp;электронных устройств<br>
+                  для обработки изображений.</p>
+              </div>
+            </div>
+
+            <div class="clients-item__col-2">
+              <div class="clients-item__text-wrapper">
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value"><sup>&times;</sup>2,8</span>
+                  Снизили тоимость<br> привлечения лида
+                  по&nbsp;сравнению с&nbsp;прогнозом </div>
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value"><sup>&times;</sup>14</span>
+                  Увеличили<br>
+                  эффективность<br>
+                  сбора
+                </div>
+                <div class="clients-item__text clients-item__chart">
+                  <span class="clients-item__chart-value">
+                    <span class="clients-item__chart-icon">
+                      <img src="./img/icons/big-check.svg" alt="" width="18px" height="14px">
+                    </span>
+                  </span>
+                  Запустили<br>
+                  в&nbsp;социальных сетях конкурс &laquo;Охотники за&nbsp;вдохновением&raquo;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits benefits__bg-right">
+      <div class="container">
+        <div class="benefits__heading">
+          <h2 class="benefits__heading main-title">С&nbsp;помощью email-маркетинга:</h2>
+        </div>
+
+        <div class="benefits__item-wrapper benefits__item-wrapper--narrow">
+          <div class="benefits__item">
+            <img src="./img/benefit_1.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">получи новых клиентов</p>
+          </div>
+
+          <div class="benefits__item">
+            <img src="./img/benefit_2.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">удержи активных клиентов</p>
+          </div>
+
+          <div class="benefits__item">
+            <img src="./img/benefit_3.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">увеличь средний чек и&nbsp;повторные продажи</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team team__bg">
+      <div class="container">
+        <style>
+          .main-item__list {
+            list-style-image: url('./img/icons/list-thumb.svg');
+          }
+        </style>
+
+        <div class="main-item main-item--margin">
+          <div class="main-item__col-1">
+            <h2 class="team__heading main-title">Найми команду<br>
+              за 150 000 <i class="icon"><img src="./img/icons/rub_black.svg" alt=""></i> в&#160;месяц: </h2>
+
+            <div class="main-item__list-wrapper">
+              <ul class="main-item__list">
+                <li class="main-item__list-item">аккаунт-менеджер</li>
+                <li class="main-item__list-item">контент-маркетолог</li>
+                <li class="main-item__list-item">корректор </li>
+              </ul>
+
+              <ul class="main-item__list">
+                <li class="main-item__list-item">дизайнер</li>
+                <li class="main-item__list-item">верстальщик</li>
+                <li class="main-item__list-item">технический специалист</li>
+              </ul>
+            </div>
+
+
+            <div class="main-btn__wrapper" id='toFormJs'>
+              <a href="" class="main-btn">Оставить заявку</a>
+            </div>
+          </div>
+          <div class="main-item__col-2">
+            <div class="main-item__img-wrapper">
+              <img src="./img/main-item_1.svg" alt="" class="main-item__img">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="main-item main-item--reverse">
+          <div class="main-item__col-1">
+            <h2 class="team__heading main-title">Что будем делать?</h2>
+            <div class="main-item__list-wrapper">
+              <ul class="main-item__list">
+                <li class="main-item__list-item">
+                  Изучим отрасль и конкурентов.</li>
+                <li class="main-item__list-item">Разработаем стратегию коммуникаций.</li>
+                <li class="main-item__list-item">Определим инструменты: email, пуши, поп-апы, игровые механики. </li>
+                <li class="main-item__list-item">Соберем базу подписчиков.</li>
+                <li class="main-item__list-item"> Повысим вовлечение и лояльность клиентов.</li>
+                <li class="main-item__list-item"> Проанализируем эффективность каждой кампании.</li>
+                <li class="main-item__list-item"> Составим план для ежемесячного повышения выручки с канала.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-item__col-2">
+            <div class="main-item__img-wrapper">
+              <img src="./img/main-item_2.svg" alt="" class="main-item__img">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div class="container">
+        <div class="benefits__heading">
+          <h2 class="benefits__heading main-title">Почему мы?</h2>
+        </div>
+
+        <div class="benefits__item-wrapper">
+          <div class="benefits__item">
+            <img src="./img/team_1.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">Работаем по KPI
+              и гарантируем результат.</p>
+          </div>
+
+          <div class="benefits__item">
+            <img src="./img/team_2.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">Запустили
+              3000 email-кампаний
+              за 7 лет.</p>
+          </div>
+
+          <div class="benefits__item">
+            <img src="./img/team_3.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">Работаем с крупными клиентами: Nikon, «Пятерочка», JBL, Panasonic,
+              «Перекресток», Haier, «Росинтер», Pfizer, «Открытие».</p>
+          </div>
+
+          <div class="benefits__item">
+            <img src="./img/team_4.svg" alt="" class="benefits__item-img">
+            <p class="benefits__item-text">Команда сотрудников
+              в штате, никаких фрилансеров.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      .sub-modal__bg {
+        background-image: url('./img/modal_bg.svg');
+        background-repeat: no-repeat;
+        /* background-size: contain; */
+        background-size: 100% 100%;
+      }
+    </style>
+    <div class="sub-modal__paranja sub-modal__paranja--shown" id="paranja">
+      <div class="sub-modal sub-modal__bg">
+        <span class="sub-modal__close-btn" id="close-btn">
+          <img src="./img/icons/close.svg" alt="" class="sub-modal__close-icon">
+        </span>
+        <div class="sub-modal__text-wrapper">
+          <p class="sub-modal__text sub-modal__text--big">Спасибо за заявку!</p>
+          <p class="sub-modal__text">Мы свяжемся с вами<br>
+            в ближайшее время.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+  <style>
+    .page-footer {
+      background-image: url('./img/footer-bg.svg');
+      background-repeat: no-repeat;
+      background-size: 1600px 1589px;
+      background-position: center -150px;
+    }
+  </style>
+  <footer class="page-footer">
+    <section class="subscribe wrapper anchorJs">
+      <div class="subscribe__heading">
+        <h2 class="subscribe__heading main-title">Обсудим? <br>
+          Позвони нам <a class="main-title__link" href="tel:+74992816959">+7 499 281-69-59
+          </a><br>
+          или оставь заявку</h2>
+      </div>
+
+      <div class="subscribe-form__wrapper">
+        <form action="" class="subscribe-form">
+          <div class="subscribe-form__items-wrapper">
+            <div class="subscribe-form__item">
+              <label class="subscribe-form__label">
+                <input class="subscribe-form__input" id="sub-name" type="text" placeholder="Имя" />
+              </label>
+            </div>
+
+            <div class="subscribe-form__item">
+              <label class="subscribe-form__label">
+                <input class="subscribe-form__input" id="sub-tel" type="tel" placeholder="Телефон" />
+              </label>
+            </div>
+
+            <div class="subscribe-form__item">
+              <label class="subscribe-form__label">
+                <input class="subscribe-form__input" id="sub-email" type="email" placeholder="Email" />
+              </label>
+            </div>
+
+            <style>
+              .checkbox__input:checked+.checkbox__box {
+                background-image: url("./img/icons/check.svg");
+              }
+            </style>
+            <div class="checkbox__wrapper">
+              <label class="checkbox-label checkbox">
+                <input id="check-sms" class="checkbox__input" type="checkbox" checked />
+                Нажимая кнопку «Отправить», вы соглашаетесь с
+                <span class="checkbox__box"></span>
+              </label>
+              <a href="" class="checkbox__link">политикой обработки
+                персональных данных ООО «Аутофклауд»</a>
+            </div>
+
+            <button class=" main-btn__wrapper main-btn">Отправить
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <div class="additional-info">
+        <a href="" class="additional-info__link page-footer__text">Узнай больше о компании Out of Cloud.
+        </a>
+        <a href="" class="additional-info__link page-footer__text">Политика компании в отношении обработки персональных
+          данных.</a>
+      </div>
+
+      <div class="social-list">
+        <a href="https://www.facebook.com/outofcloud.ru" class="social-list__link social-list__link--fb">
+          <img src="./img/icons/fb_icon.svg" alt="" class="social-list__logo">
+        </a>
+        <a href="https://www.instagram.com/outofcloud.ru/" class="social-list__link social-list__link--inst">
+          <img src="./img/icons/inst_icon.svg" alt="" class="social-list__logo">
+        </a>
+      </div>
+
+      <span class="page-footer__text">© 2019 Агентство Out of Cloud</span>
+    </section>
+  </footer>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+  <style>
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+      background: 0 0;
+      color: inherit;
+      border: none;
+      padding: 0 !important;
+      font: inherit;
+      font-weight: 100;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      position: absolute;
+      top: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* background-image: url('./img/icons/arrow__orange.svg'); */
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border: 1px solid #FF800B;
+      background-color: rgba(255, 130, 11, 0.05);
+      color: #FF800B;
+    }
+
+    .owl-carousel .owl-nav button.owl-next:hover,
+    .owl-carousel .owl-nav button.owl-prev:hover,
+    .owl-carousel button.owl-dot:hover {
+      background-image: url('./img/icons/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border: 1px solid #FF800B;
+      background: linear-gradient(134.01deg, #FF6903 -53.9%, #FF9B14 105.9%);
+      right: 0px;
+      color: #fff;
+
+    }
+
+    .owl-carousel .owl-nav button.owl-next:active,
+    .owl-carousel .owl-nav button.owl-prev:active,
+    .owl-carousel button.owl-dot:active {
+      background-image: url('./img/icons/arrow.svg');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      border: 1px solid #FF800B;
+      background: linear-gradient(134.01deg, #FF6903 -53.9%, #FF9B14 105.9%);
+      right: 0px;
+      color: #fff;
+
+    }
+
+    .owl-carousel .owl-nav button.owl-next,
+    .owl-carousel button.owl-dot {
+      right: 0px;
+    }
+
+    .owl-carousel .owl-nav button.owl-prev,
+    .owl-carousel button.owl-dot {
+      left: 0px;
+    }
+
+    @media (max-width:1024px) {
+
+      .owl-carousel .owl-nav button.owl-next,
+      .owl-carousel .owl-nav button.owl-prev,
+      .owl-carousel button.owl-dot {
+        background: 0 0;
+        color: inherit;
+        border: none;
+        padding: 0 !important;
+        font: inherit;
+        font-weight: 100;
+        width: 20px;
+        height: 20px;
+        border-radius: none;
+        position: absolute;
+        top: 150px;
+        display: block;
+        /* background-image: url('./img/icons/arrow__orange.svg'); */
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        border: none;
+        background-color: transparent;
+        color: #FF800B;
+      }
+
+      .owl-carousel .owl-nav button.owl-next:hover,
+      .owl-carousel .owl-nav button.owl-prev:hover,
+      .owl-carousel button.owl-dot:hover {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: none;
+        border: none;
+        background: none;
+        right: 0px;
+        color: rgb(196, 96, 4);
+
+      }
+
+      .owl-carousel .owl-nav button.owl-next:active,
+      .owl-carousel .owl-nav button.owl-prev:active,
+      .owl-carousel button.owl-dot:active {
+        background-image: none;
+        background-repeat: no-repeat;
+        background-position: none;
+        border: none;
+        background: none;
+        right: 0px;
+        color: rgb(196, 96, 4);
+
+      }
+    }
+  </style>
+
+  <script>
+    $(document).ready(function () {
+      $(".owl-carousel").owlCarousel({
+        items: 1,
+        loop: true,
+        dots: false,
+        nav: true,
+        navText: ['&#8592;', '&#8594;'],
+        // responsive: {
+        //   1024: {
+        //     nav: true,
+        //   }
+        // }
+      });
+    });
+  </script>
+</body>
+
+</html>

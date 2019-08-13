@@ -1,0 +1,127 @@
+// @mixin main-wrapper {
+//   max-width: 1340px;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+// @mixin mobile-wrapper {
+//   max-width: 475px;
+//   width: 100%;
+//   margin: 0 auto;
+// }
+@mixin list-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin indent-reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin section-mb {
+  margin-bottom: 100px;
+}
+
+// Typo Mixins
+@mixin main-h2 {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: #31384E;
+
+  &__link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+  }
+}
+
+@mixin main-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+  color: #31384E;
+}
+
+@mixin label-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.01em;
+  color: #31384E;
+}
+
+@mixin input-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.02em;
+  color: #1054F6;
+}
+
+
+@mixin small-text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #B2B8D1;
+}
+
+// Gradients 
+@mixin gradient-blue {
+  background: linear-gradient(115.49deg, #0E4CF5 0%, #2BC0FD 99.04%);
+}
+
+@mixin gradient-orange {
+  background: linear-gradient(101.75deg, #FF6201 0%, #FFA216 98.58%);
+}
+
+
+// Tablet
+@media (max-width: $tableWidth) {
+  @mixin section-mb {
+    margin-bottom: 50px;
+  }
+
+  // Typo Mixins
+  @mixin main-h2 {
+    font-size: 24px;
+    line-height: 36px;
+
+  }
+
+  @mixin main-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @mixin label-text {
+    font-size: 14px;
+    line-height: 24px;
+
+  }
+
+  @mixin input-text {
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+}
+
+
+@media (max-width: $phoneWidth) {}

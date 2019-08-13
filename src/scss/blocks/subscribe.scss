@@ -1,0 +1,104 @@
+.subscribe {
+    &__heading {
+        color: #fff;
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 60px;
+
+    }
+}
+
+.subscribe-form {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__wrapper {
+        // padding-left: 5px;
+        // padding-right: 5px;
+        padding-top: 62px;
+        padding-bottom: 62px;
+        background-color: #fff;
+        border-radius: 5px;
+        max-width: 490px;
+        width: 100%;
+        margin: 0 auto;
+
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__items-wrapper {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: flex-start;
+    }
+
+    &__item {
+        width: 100%;
+        // box-sizing: border-box;
+        margin-bottom: 30px;
+    }
+
+    &__input {
+        background: #FAFBFE;
+        border: 1px solid #F0F4FE;
+
+        box-sizing: border-box;
+        width: 100%;
+        padding-top: 23px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 23px;
+
+        // margin-bottom: 30px;
+        &::placeholder {
+            font-family: "Raleway";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0.01em;
+            color: #B2B8D1;
+        }
+    }
+}
+
+
+
+@media (max-width: $tableWidth) {
+    .subscribe-form {
+        &__wrapper {
+            max-width: unset;
+            width: 80%;
+        }
+
+        &__item {
+            width: 280px;
+            margin: 0 auto;
+            // box-sizing: border-box;
+            margin-bottom: 30px;
+        }
+    }
+
+    .page-footer {
+        background-color: #fff;
+        z-index: 2;
+    }
+}
+
+@media (max-width: $smTablet) {
+    .subscribe-form {
+        &__wrapper {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: $xlPhoneWidth) {}
