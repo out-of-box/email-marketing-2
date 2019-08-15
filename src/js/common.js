@@ -1,5 +1,14 @@
 // Anchor
-$("#toFormJs").click(function () {
+$("#toFormJs").click(function (event) {
+
+  $("html, body").animate({
+    scrollTop: $(".anchorJs").offset().top
+  },
+    1000
+  );
+});
+$("#toFormJs-2").click(function (event) {
+  event.preventDefault();
   $("html, body").animate({
     scrollTop: $(".anchorJs").offset().top
   },

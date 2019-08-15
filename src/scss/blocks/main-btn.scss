@@ -9,7 +9,7 @@
     color: #FFFFFF;
 
     &__wrapper {
-
+        display: block;
         @include gradient-orange;
         padding-top: 18px;
         padding-bottom: 18px;
@@ -31,6 +31,18 @@
         &:active {
             transform: translateY(2px);
             box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.2);
+        }
+        &--calc {
+            background: #fff;
+            border: 1px solid #1054F6;
+            color: #1054F6;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 10px 10px rgba(#1054F6, 0.2);
+            }
+        }
+        &--hidden {
+            display: none;
         }
     }
 }

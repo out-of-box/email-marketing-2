@@ -6,36 +6,75 @@
     }
 
     &__item {
-        box-shadow: 0px 4px 39px #F7F7F8;
+        position: relative;
+        box-shadow: 0px 4px 50px #E5E5E5;
         border-radius: 5px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
+        //flex-direction: row;
+        justify-content: center;
+        width: 100%;
         max-width: 824px;
         margin: 0 auto;
     }
 
     &__col-1 {
-        flex-basis: 430px;
+        flex: 1 1 auto;
+        width: 50%;
+        box-sizing: border-box;
     }
 
     &__col-2 {
+        flex: 1 1 auto;
+        width: 50%;
+        box-sizing: border-box;
         @include gradient-blue;
         color: #fff;
-        flex-basis: 49%;
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
 
         display: flex;
-        align-items: center;
+        align-items: stretch;
         justify-content: flex-start;
+        overflow: hidden;
 
-        padding: 15px 15px 15px 50px;
-
-
+        &--welcome {
+            position: absolute;
+            height: 100%;
+            right: 0;
+            background-image: linear-gradient(115.49deg, rgba(14, 76, 245, 0.75) 0%, rgba(43, 192, 253, 0.75) 99.04%);;
+        }
+        &--hidden {
+            display: none;
+        }
+    }
+    &__welcome {
+        margin: 0;
+        color: #fff;
+        font-size: 28px;
+        line-height: 1.3;
+        position: relative;
+        &:before {
+            display: block;
+            position: absolute;
+            top: 50%;
+            margin-top: -4px;
+            margin-left: -50px;
+            content: " ";
+            width: 30px;
+            height: 8px;
+            background-image: url('/img/arrow.svg');
+        }
+    }
+    &__sum {
+        margin-bottom: 24px;
     }
 
+    &__sum-item {
+        margin-bottom: 50px;
+        &:last-child {
+            margin: 0;
+        }
+    }
     &__sum-text {
         font-family: "Raleway";
         font-style: normal;
@@ -48,13 +87,25 @@
     }
 
     &__sum-output {
+        max-width: 300px;
+        padding: 0;
+        margin: 0;
         font-family: "Raleway";
         font-style: normal;
         font-weight: 500;
         font-size: 54px;
         line-height: 63px;
-        letter-spacing: 0.02em;
+        letter-spacing: 0;
         color: #FFFFFF;
+        overflow-x: auto;
+        &--roi {
+            &:after {
+                content: "%";
+                display: inline;
+                font-weight: normal;
+                font-size: 30px;
+            }
+        }
 
     }
 
@@ -80,10 +131,18 @@
     align-items: flex-start;
 
     &__wrapper {
-        padding-top: 50px;
-        padding-bottom: 50px;
-        padding-left: 24px;
-        padding-right: 24px;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 50px 56px;
+        &--summ {
+            padding-right: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &--blur {
+            filter: blur(5px)
+        }
     }
 
     &__item {
@@ -96,47 +155,60 @@
 
     &__input-title {
         @include label-text;
-        margin-bottom: 8px;
+        margin-bottom: 2px;
+    }
+    &__label {
+        display: flex;
+        position: relative;
+        width: 260px;
     }
 
     &__input {
         @include indent-reset;
         border: none;
         border-bottom: 1px solid rgba(216, 219, 233, 0.7);
-        padding-left: 10px;
+        padding-left: 0;
         padding-right: 10px;
         padding-top: 4px;
         padding-bottom: 4px;
         margin-bottom: 8px;
         box-sizing: border-box;
         width: 260px;
+        transition: border-color 0.3s ease;
         @include input-text;
 
         &::placeholder {
             color: #1054F6;
         }
+        &:focus {
+            outline: none;
+            border-bottom-color: #1054F6;
+        }
     }
 
     &__input-caption {
         @include small-text;
+        margin-bottom: 4px;
     }
-}
-
-// Для input disabled
-.calc__sum-output {
-    background-color: inherit;
-    border: none;
-    color: white;
-    font-size: 54px;
-    padding: 0;
-    margin: 0;
-    box-sizing: content-box;
-    display: block;
-    width: 100%;
-
-    &::placeholder {
-        font-size: 54px;
-        color: white;
+    &__control {
+        top: 0;
+        right: 22px;
+        position: absolute;
+        width: 32px;
+        padding: 4px;
+        font-size: 23px;
+        line-height: 23px;
+        border: 0;
+        background-color: transparent;
+        color: #D8DBE9;
+        cursor: pointer;
+        transition: color 0.3s ease;
+        &:hover {
+            color: #1054F6;
+        }
+        &:last-child {
+            right: -10px;
+        }
     }
 }
 
@@ -155,13 +227,14 @@
         flex-direction: row;
 
         &__col-1 {
-
+            width: 100%;
             max-width: unset;
             flex-basis: unset;
 
         }
 
         &__col-2 {
+            width: 100%;
             max-width: unset;
             flex-basis: unset;
             display: block;
@@ -176,8 +249,11 @@
     }
 
     .calc {
-
+        &__col-1 {
+            width: 100%;
+        }
         &__col-2 {
+            width: 100%;
             border-top-right-radius: 5px;
             border-bottom-right-radius: 5px;
             border-top-left-radius: 5px;

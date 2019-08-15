@@ -66,14 +66,11 @@
 
     <div class="container">
       <div class="heading">
-        <img src="./img/logo.svg" alt="logo_out_of_cloud" class="heading__img-logo" width="150px" height="40px">
+        <img src="./img/logo.svg" alt="logo_out_of_cloud" class="heading__img-logo" width="150" height="40">
         <h1 class="heading__title">Email-маркетинг</h1>
-        <p class="heading__caption">Получи дополнительную прибыль
-        </p>
+        <h2 class="heading__caption">Посчитай потенциальную выручку с&nbsp;канала:</h2>
       </div>
     </div>
-  </header>
-  <main class="page-main page-main__bg">
     <section class="calc calc__bg">
       <div class="container">
         <style>
@@ -85,65 +82,86 @@
             z-index: 1;
           }
         </style>
-
-        <div class="calc__heading">
-          <h2 class="calc__heading main-title">Посчитай потенциальную выручку:</h2>
-        </div>
-
         <div class="calc__item">
           <div class="calc__col-1">
             <div class="calc-form__wrapper">
               <form action="" class="calc-form">
-
                 <div class="calc-form__item">
                   <span class="calc-form__input-title">Размер базы</span>
+                  <span class="calc-form__input-caption">Сколько подписчиков?</span>
                   <label class="calc-form__label" for="1">
                     <input class="calc-form__input" id="calcB3" type="number" for="1" placeholder="0" value='' />
+                    <button class="calc-form__control" id="minusB3">&minus;</button>
+                    <button class="calc-form__control" id="plusB3">&#43;</button>
                   </label>
-                  <span class="calc-form__input-caption">Сколько подписчиков? </span>
                 </div>
-
                 <div class="calc-form__item">
                   <span class="calc-form__input-title">Трафик на&nbsp;сайте</span>
+                  <span class="calc-form__input-caption">Сколько пользователей в&nbsp;месяц? </span>
                   <label class="calc-form__label" for="1">
                     <input class="calc-form__input" id="calcB4" type="number" for="1" placeholder="0" value='' />
+                    <button class="calc-form__control" id="minusB4">&minus;</button>
+                    <button class="calc-form__control" id="plusB4">+</button>
                   </label>
-                  <span class="calc-form__input-caption">Сколько пользователей в&nbsp;месяц? </span>
                 </div>
 
                 <div class="calc-form__item">
                   <span class="calc-form__input-title">Конверсия покупок на&nbsp;сайте</span>
+                  <span class="calc-form__input-caption">Сколько процентов из&nbsp;них покупает? </span>
                   <label class="calc-form__label" for="1">
                     <input class="calc-form__input" id="calcB5" type="number" for="1" placeholder="0.1" value='0.1'
                       step='0.1' />
+                    <button class="calc-form__control" id="minusB5">&minus;</button>
+                    <button class="calc-form__control" id="plusB5">+</button>
                   </label>
-                  <span class="calc-form__input-caption">Сколько процентов из&nbsp;них покупает? </span>
+
                 </div>
 
                 <div class="calc-form__item">
                   <span class="calc-form__input-title">Средний чек</span>
+                  <span class="calc-form__input-caption">Какая средняя сумма покупки в&nbsp;рублях?</span>
                   <label class="calc-form__label" for="1">
                     <input class="calc-form__input" id="calcB6" type="number" for="1" placeholder="0" value='' />
+                    <button class="calc-form__control" id="minusB6">&minus;</button>
+                    <button class="calc-form__control" id="plusB6">+</button>
                   </label>
-                  <span class="calc-form__input-caption">Какая средняя сумма покупки в&nbsp;рублях?</span>
                 </div>
-
+                <button id='js-result' class="main-btn main-btn__wrapper main-btn__wrapper--calc">Рассчитать</button>
               </form>
             </div>
           </div>
           <div class="calc__col-2">
-            <div class="calc__sum">
-              <span class="calc__sum-text">Итого:</span>
-              <div class="calc__sum-item">
-                <p class="calc__sum-output" id="calc-output">0</p>
+            <div class="calc-form__wrapper calc-form__wrapper--blur calc-form__wrapper--summ" id="calc-summ">
+              <div class="calc__sum">
+                <div class="calc__sum-item">
+                  <span class="calc__sum-text">Выручка:</span>
+                  <p class="calc__sum-output" id="calc-output">0</p>
+                  <span class="calc__sum-value"><i class="icon"><img src="./img/icons/rub.svg" alt=""></i></span>
+                  <span class="calc__sum-value calc__sum-value--small">/ мес.</span>
+                </div>
+                <div class="calc__sum-item">
+                  <span class="calc__sum-text">ROI:</span>
+                  <p class="calc__sum-output calc__sum-output--roi" id="calc-roi-output">0</p>
+                </div>
               </div>
-              <span class="calc__sum-value"><i class="icon"><img src="./img/icons/rub.svg" alt=""></i></span>
-              <span class="calc__sum-value calc__sum-value--small">/ мес.</span>
+              <button id='toFormJs-2' class="main-btn main-btn__wrapper main-btn__wrapper--hidden">Оставить
+                заявку</button>
+            </div>
+            <div class="calc__col-2 calc__col-2--welcome" id="calc-welcome">
+              <div class="calc-form__wrapper calc-form__wrapper--summ">
+                <p class="calc__welcome">
+                  Заполни значения и&nbsp;нажми &laquo;Рассчитать&raquo;
+                </p>
+              </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>
+  </header>
+  <main class="page-main page-main__bg">
+
 
     <section class="clients">
       <div class="container">
@@ -328,10 +346,7 @@
               </ul>
             </div>
 
-
-            <div class="main-btn__wrapper" id='toFormJs'>
-              <a href="" class="main-btn">Оставить заявку</a>
-            </div>
+            <button id='toFormJs' class="main-btn main-btn__wrapper">Оставить заявку</button>
           </div>
           <div class="main-item__col-2">
             <div class="main-item__img-wrapper">
@@ -409,7 +424,7 @@
         background-size: 100% 100%;
       }
     </style>
-    <div class="sub-modal__paranja sub-modal__paranja--shown" id="paranja">
+    <div class="sub-modal__paranja" id="paranja">
       <div class="sub-modal sub-modal__bg">
         <span class="sub-modal__close-btn" id="close-btn">
           <img src="./img/icons/close.svg" alt="" class="sub-modal__close-icon">
