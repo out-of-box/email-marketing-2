@@ -31,3 +31,15 @@
         margin: 0 0 35px;
     }
 }
+
+@media (max-width: $xlPhoneWidth) {
+    .heading {
+        &__title {
+            font-size: 40px;
+            line-height: 1.44;
+        }
+        &__caption {
+            line-height: 1.44;
+        }
+    }
+}

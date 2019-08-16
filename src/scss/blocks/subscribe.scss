@@ -2,6 +2,7 @@
     &__heading {
         color: #fff;
         margin: 0 auto;
+        max-width: 490px;
         width: 70%;
         margin-bottom: 60px;
 
@@ -34,10 +35,10 @@
     }
 
     &__items-wrapper {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: center;
-        // align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     &__item {
@@ -101,4 +102,12 @@
     }
 }
 
-@media (max-width: $xlPhoneWidth) {}
+@media (max-width: $xlPhoneWidth) {
+    .subscribe {
+        &__heading {
+            //width: 100%;
+            font-size: 24px;
+            line-height: 1.44;
+        }
+    }
+}

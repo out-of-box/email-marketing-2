@@ -45,12 +45,15 @@ var minusButtons = [
 minusButtons.forEach(function (el, index) {
     el.addEventListener('click', function (event) {
         event.preventDefault();
-        var decrement = index === 2 ? 1 : 1000;
+        var decrement = 100;
         var id = '#calcB' + (index + 3);
         var calc = document.querySelector(id);
-        var value = calc.value === "" ? 0 : parseInt(calc.value);
-        value -= decrement / 20;
-        if (value < 0) { value = 0 };
+
+        var value = calc.value === "" ? 0 : parseFloat(calc.value);
+        index === 2 ? value = value * 1000 : "";
+        value -= decrement
+        index === 2 ? value = value / 1000 : "";
+        value < 0 ? value = 0 : "";
         calc.value = value;
     })
 })
@@ -64,15 +67,15 @@ var plusButtons = [
 plusButtons.forEach(function (el, index) {
     el.addEventListener('click', function (event) {
         event.preventDefault();
-        var increment = index === 2 ? 20 : 1000;
+        var increment = 100; //index === 2 ? 0.1 :
         var id = '#calcB' + (index + 3);
         var calc = document.querySelector(id);
 
-        var value = calc.value === "" ? 0 : parseInt(calc.value);
-        index === 2 ? value = value * 20 : "";
-        value = value + increment / 20;
-        if (value < 0) { value = 0 };
-        calc.value = index === 2 ? value / 20 : value;
+        var value = calc.value === "" ? 0 : parseFloat(calc.value);
+        index === 2 ? value = value * 1000 : "";
+        value += increment
+        index === 2 ? value = value / 1000 : "";
+        calc.value = value;
     })
 })
 
@@ -114,22 +117,18 @@ function setResult() {
         separator: ' ',
         suffix: suffix
     };
-    console.log(parseInt(currentRevenue));
     var demo = new CountUp('calc-output', currentRevenue, options);
     demo.start();
     window.setTimeout(function () { roiOutput.innerHTML = roi(param1, param2, param3, param4) }, 2000);
 }
 calcButton.addEventListener('click', function (event) {
     event.preventDefault();
-    roiOutput.innerHTML = "0";
-    goToFormButton.classList.contains('main-btn__wrapper--hidden') ? goToFormButton.classList.remove('main-btn__wrapper--hidden') : "";
-    calcSumPanel.classList.contains('calc-form__wrapper--blur') ? calcSumPanel.classList.remove('calc-form__wrapper--blur') : "";
-    !calcWelcomePanel.classList.contains('calc__col-2--hidden') ? calcWelcomePanel.classList.add('calc__col-2--hidden') : "";
-    setResult()
+
+    if (inputNum1.value !== "" && inputNum4.value !== "") {
+        roiOutput.innerHTML = "0";
+        goToFormButton.classList.contains('main-btn__wrapper--hidden') ? goToFormButton.classList.remove('main-btn__wrapper--hidden') : "";
+        calcSumPanel.classList.contains('calc-form__wrapper--blur') ? calcSumPanel.classList.remove('calc-form__wrapper--blur') : "";
+        !calcWelcomePanel.classList.contains('calc__col-2--hidden') ? calcWelcomePanel.classList.add('calc__col-2--hidden') : "";
+        setResult()
+    }
 });
-/*
-inputNum1.addEventListener('input', setResult);
-inputNum2.addEventListener('input', setResult);
-inputNum3.addEventListener('input', setResult);
-inputNum4.addEventListener('input', setResult);
-*/

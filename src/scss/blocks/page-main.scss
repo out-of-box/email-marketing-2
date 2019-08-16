@@ -43,6 +43,13 @@
         display: flex;
         align-items: center;
     }
+    &__img {
+        width: 479px;
+        height: auto;
+        &--2 {
+            width: 436px;
+        }
+    }
 }
 
 @media (max-width: $tableWidth) {
@@ -57,6 +64,7 @@
             width: 100%;
             margin-bottom: 30px;
         }
+        
 
         &__col-1 {
             flex-basis: unset;
@@ -73,4 +81,14 @@
 
 @media (max-width: $smTablet) {}
 
-@media (max-width: $xlPhoneWidth) {}
+@media (max-width: $xlPhoneWidth) {
+    .main-item {
+        &__img {
+            width: 100%;
+        }
+        &__list-wrapper {
+            box-sizing: border-box;
+            padding-left: 30px;
+        }
+    }
+}
