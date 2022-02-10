@@ -28,7 +28,7 @@
     "mini-css-extract-plugin": "^0.6.0",
     "mmenu-js": "^8.1.1",
     "mmenu-light": "^1.0.4",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "postcss": "^7.0.16",
     "postcss-loader": "^3.0.0",
